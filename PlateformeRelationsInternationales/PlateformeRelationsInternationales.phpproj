@@ -1,0 +1,282 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>PlateformeRelationsInternationales</Name>
+    <ProjectGuid>{0e30598b-66bc-4e6c-b367-01eba04d1b26}</ProjectGuid>
+    <RootNamespace>
+    </RootNamespace>
+    <OutputType>Library</OutputType>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <SaveServerSettingsInUserFile>false</SaveServerSettingsInUserFile>
+    <Runtime>PHP</Runtime>
+    <RuntimeVersion>7.2</RuntimeVersion>
+    <EnvName>PHPDev</EnvName>
+    <PHPDevHostName>localhost</PHPDevHostName>
+    <PHPDevAutoPort>true</PHPDevAutoPort>
+    <CustomXdebugPort>9000</CustomXdebugPort>
+    <PublishEvent>None</PublishEvent>
+    <DebugMappingMethod>Automatic</DebugMappingMethod>
+    <DBGpProxyEnabled>false</DBGpProxyEnabled>
+    <DBGpProxyPort>9001</DBGpProxyPort>
+    <IISProjectUrl>http://localhost:7472/</IISProjectUrl>
+    <IISExpressSslEnabled>false</IISExpressSslEnabled>
+    <IISExpressSecurePort>44300</IISExpressSecurePort>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="index.php" />
+    <Compile Include="php\controleurs\ControleurAidesFinancieres.php" />
+    <Compile Include="php\controleurs\ControleurAuthentification.php" />
+    <Compile Include="php\controleurs\ControleurContactsEtrangers.php" />
+    <Compile Include="php\controleurs\ControleurCoordinateurs.php" />
+    <Compile Include="php\controleurs\ControleurCouts.php" />
+    <Compile Include="php\controleurs\ControleurDomainesDeCompetences.php" />
+    <Compile Include="php\controleurs\ControleurEtatsPartenaires.php" />
+    <Compile Include="php\controleurs\ControleurMails.php" />
+    <Compile Include="php\controleurs\ControleurMobilites.php" />
+    <Compile Include="php\controleurs\ControleurPartenaires.php" />
+    <Compile Include="php\controleurs\ControleurSpecialites.php" />
+    <Compile Include="php\controleurs\ControleurTemplatesMails.php" />
+    <Compile Include="php\controleurs\ControleurUtilisateurs.php" />
+    <Compile Include="php\controleurs\ControleurVoeux.php" />
+    <Compile Include="php\controleurs\IControleurPlateforme.php" />
+    <Compile Include="php\exception\ExceptionAuthentification.php" />
+    <Compile Include="php\exception\ExceptionBaseDeDonneesPlateforme.php" />
+    <Compile Include="php\exception\ExceptionGestionMails.php" />
+    <Compile Include="php\exception\ExceptionSerializable.php" />
+    <Compile Include="php\exception\ExceptionUtilisateurDeconnecte.php" />
+    <Compile Include="php\exception\ExceptionVoeuxDejaValides.php" />
+    <Compile Include="php\gestionMails\ContactMailGestionMails.php" />
+    <Compile Include="php\modele\AideFinanciere.php" />
+    <Compile Include="php\modele\Contact.php" />
+    <Compile Include="php\modele\ContactEtranger.php" />
+    <Compile Include="php\modele\ContactMail.php" />
+    <Compile Include="php\modele\Coordinateur.php" />
+    <Compile Include="php\modele\Cout.php" />
+    <Compile Include="php\modele\DomaineDeCompetence.php" />
+    <Compile Include="php\modele\EtatPartenaire.php" />
+    <Compile Include="php\modele\Mail.php" />
+    <Compile Include="php\modele\ImagePartenaire.php" />
+    <Compile Include="php\modele\ISerializable.php" />
+    <Compile Include="php\modele\Localisation.php" />
+    <Compile Include="php\gestionMails\MailGestionMails.php" />
+    <Compile Include="php\modele\Mobilite.php" />
+    <Compile Include="php\modele\Partenaire.php" />
+    <Compile Include="php\modele\Plateforme.php" />
+    <Compile Include="php\modele\SousSpecialite.php" />
+    <Compile Include="php\modele\Specialite.php" />
+    <Compile Include="php\modele\TemplateMail.php" />
+    <Compile Include="php\modele\Utilisateur.php" />
+    <Compile Include="php\modele\Voeu.php" />
+    <Compile Include="php\rest\aidesFinancieres.php" />
+    <Compile Include="php\rest\authentification.php" />
+    <Compile Include="php\rest\contactsEtrangers.php" />
+    <Compile Include="php\rest\coordinateurs.php" />
+    <Compile Include="php\rest\couts.php" />
+    <Compile Include="php\rest\domainesDeCompetences.php" />
+    <Compile Include="php\rest\etatsPartenaires.php" />
+    <Compile Include="php\rest\mails.php" />
+    <Compile Include="php\rest\mobilites.php" />
+    <Compile Include="php\rest\partenaires.php" />
+    <Compile Include="php\rest\specialites.php" />
+    <Compile Include="php\rest\templatesMails.php" />
+    <Compile Include="php\rest\utilisateurs.php" />
+    <Compile Include="php\rest\voeux.php" />
+    <Compile Include="php\stockage\GestionFichiers.php" />
+    <Compile Include="php\gestionMails\GestionMails.php" />
+    <Compile Include="php\stockage\InstalleurBaseDeDonnees.php" />
+    <Compile Include="php\stockage\StockageAidesFinancieres.php" />
+    <Compile Include="php\stockage\StockageBaseDeDonnees.php" />
+    <Compile Include="php\stockage\StockageContacts.php" />
+    <Compile Include="php\stockage\StockageContactsEtrangers.php" />
+    <Compile Include="php\stockage\StockageCoordinateurs.php" />
+    <Compile Include="php\stockage\StockageCouts.php" />
+    <Compile Include="php\stockage\StockageDomainesDeCompetences.php" />
+    <Compile Include="php\stockage\StockageEtatsPartenaires.php" />
+    <Compile Include="php\stockage\StockageMails.php" />
+    <Compile Include="php\stockage\StockageMobilites.php" />
+    <Compile Include="php\stockage\StockagePartenaires.php" />
+    <Compile Include="php\stockage\StockageSpecialites.php" />
+    <Compile Include="php\stockage\StockageTemplatesMails.php" />
+    <Compile Include="php\stockage\StockageUtilisateurs.php" />
+    <Compile Include="php\stockage\StockageVoeux.php" />
+    <Compile Include="php\templates\templatePageApplication.php" />
+    <Compile Include="php\pages\Page.php" />
+    <Compile Include="php\pages\PageApplication.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+    <Folder Include="images\accueil\" />
+    <Folder Include="images\erreur\" />
+    <Folder Include="images\apropos\" />
+    <Folder Include="php\modele\" />
+    <Folder Include="php\exception\" />
+    <Folder Include="php\controleurs\" />
+    <Folder Include="php\gestionMails\" />
+    <Folder Include="php\rest\" />
+    <Folder Include="php\stockage\" />
+    <Folder Include="php\templates\" />
+    <Folder Include="php\pages\" />
+    <Folder Include="scss\" />
+    <Folder Include="php\" />
+    <Folder Include="scss\vues\" />
+    <Folder Include="ts\" />
+    <Folder Include="ts\modelePlateforme\" />
+    <Folder Include="ts\erreur\" />
+    <Folder Include="ts\information\" />
+    <Folder Include="ts\controleursPlateforme\" />
+    <Folder Include="ts\vuesPlateforme\" />
+    <Folder Include="ts\vuesPlateforme\composants\" />
+    <Folder Include="ts\vuesPlateforme\templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".env" />
+    <Content Include=".htaccess" />
+    <Content Include="images\accueil\administration.png" />
+    <Content Include="images\accueil\aidesfinancieres.png" />
+    <Content Include="images\accueil\apropos.png" />
+    <Content Include="images\accueil\background.jpg" />
+    <Content Include="images\accueil\coordinateurs.png" />
+    <Content Include="images\accueil\mails.png" />
+    <Content Include="images\accueil\partenaires.png" />
+    <Content Include="images\apropos\apropos.png" />
+    <Content Include="images\erreur\text.png" />
+    <Content Include="images\favicon.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="package.json" />
+    <Content Include="php\templates\validationListeVoeuxPartenaires.php" />
+    <Content Include="scss\style.scss" />
+    <Content Include="scss\vues\vueAccueil.scss" />
+    <Content Include="scss\vues\vueAdministration.scss" />
+    <Content Include="scss\vues\vueAidesFinancieres.scss" />
+    <Content Include="scss\vues\vueAPropos.scss" />
+    <Content Include="scss\vues\vueAuthentification.scss" />
+    <Content Include="scss\vues\vueCoordinateurs.scss" />
+    <Content Include="scss\vues\vueCouts.scss" />
+    <Content Include="scss\vues\vueDeconnexion.scss" />
+    <Content Include="scss\vues\vueDetailsUtilisateur.scss" />
+    <Content Include="scss\vues\vueErreur.scss" />
+    <Content Include="scss\vues\vueMails.scss" />
+    <Content Include="scss\vues\vuePartenaires.scss" />
+    <Content Include="tsconfig.json" />
+    <Content Include="ts\application.ts" />
+    <Content Include="ts\controleurPlateforme.ts" />
+    <Content Include="ts\controleursPlateforme\controleurAidesFinancieres.ts" />
+    <Content Include="ts\controleursPlateforme\controleurAuthentification.ts" />
+    <Content Include="ts\controleursPlateforme\controleurContactsEtrangers.ts" />
+    <Content Include="ts\controleursPlateforme\controleurCoordinateurs.ts" />
+    <Content Include="ts\controleursPlateforme\controleurCouts.ts" />
+    <Content Include="ts\controleursPlateforme\controleurDomainesDeCompetences.ts" />
+    <Content Include="ts\controleursPlateforme\controleurEtatsPartenaires.ts" />
+    <Content Include="ts\controleursPlateforme\controleurMails.ts" />
+    <Content Include="ts\controleursPlateforme\controleurMobilites.ts" />
+    <Content Include="ts\controleursPlateforme\controleurPartenaires.ts" />
+    <Content Include="ts\controleursPlateforme\controleurSpecialites.ts" />
+    <Content Include="ts\controleursPlateforme\controleurTemplatesMails.ts" />
+    <Content Include="ts\controleursPlateforme\controleurUtilisateurs.ts" />
+    <Content Include="ts\controleursPlateforme\controleurVoeux.ts" />
+    <Content Include="ts\erreur\erreurChampsNonRemplis.ts" />
+    <Content Include="ts\erreur\erreurPageInexistante.ts" />
+    <Content Include="ts\erreur\erreurSerializable.ts" />
+    <Content Include="ts\information\informationSerializable.ts" />
+    <Content Include="ts\modelePlateforme\contactEtranger.ts" />
+    <Content Include="ts\modelePlateforme\contactMail.ts" />
+    <Content Include="ts\modelePlateforme\coordinateur.ts" />
+    <Content Include="ts\modelePlateforme\icontact.ts" />
+    <Content Include="ts\modelePlateforme\mail.ts" />
+    <Content Include="ts\modelePlateforme\templateMail.ts" />
+    <Content Include="ts\modelePlateforme\utilisateur.ts" />
+    <Content Include="ts\store.ts" />
+    <Content Include="ts\storeModuleAuthentification.ts" />
+    <Content Include="ts\vuesPlateforme\composants\editeurHtml.ts" />
+    <Content Include="ts\vuesPlateforme\composants\multipleSelectAvecTag.ts" />
+    <Content Include="ts\vuesPlateforme\composants\optionMultipleSelectAvecTag.ts" />
+    <Content Include="ts\vuesPlateforme\ivueAuthentification.ts" />
+    <Content Include="ts\vuesPlateforme\ivueContactsEtrangers.ts" />
+    <Content Include="ts\vuesPlateforme\ivueCoordinateurs.ts" />
+    <Content Include="ts\vuesPlateforme\ivueSpecialites.ts" />
+    <Content Include="ts\vuesPlateforme\ivueTemplatesMails.ts" />
+    <Content Include="ts\vuesPlateforme\ivueUtilisateurs.ts" />
+    <Content Include="ts\vuesPlateforme\ivueVoeux.ts" />
+    <Content Include="ts\vuesPlateforme\ivueAidesFinancieres.ts" />
+    <Content Include="ts\vuesPlateforme\ivueCouts.ts" />
+    <Content Include="ts\vuesPlateforme\ivueDomainesDeCompetences.ts" />
+    <Content Include="ts\vuesPlateforme\ivueEtatsPartenaires.ts" />
+    <Content Include="ts\vuesPlateforme\ivueMails.ts" />
+    <Content Include="ts\vuesPlateforme\ivueMobilites.ts" />
+    <Content Include="ts\ivuePlateforme.ts" />
+    <Content Include="ts\main.ts" />
+    <Content Include="ts\modelePlateforme\aideFinanciere.ts" />
+    <Content Include="ts\modelePlateforme\contact.ts" />
+    <Content Include="ts\modelePlateforme\cout.ts" />
+    <Content Include="ts\modelePlateforme\domaineDeCompetence.ts" />
+    <Content Include="ts\modelePlateforme\etatpartenaire.ts" />
+    <Content Include="ts\modelePlateforme\imagePartenaire.ts" />
+    <Content Include="ts\modelePlateforme\iserializable.ts" />
+    <Content Include="ts\modelePlateforme\localisation.ts" />
+    <Content Include="ts\modelePlateforme\mobilite.ts" />
+    <Content Include="ts\modelePlateforme\partenaire.ts" />
+    <Content Include="ts\modelePlateforme\plateforme.ts" />
+    <Content Include="ts\modelePlateforme\sousspecialite.ts" />
+    <Content Include="ts\modelePlateforme\specialite.ts" />
+    <Content Include="ts\modelePlateforme\voeu.ts" />
+    <Content Include="ts\router.ts" />
+    <Content Include="ts\shims-scss.d.ts" />
+    <Content Include="ts\shims-vue.d.ts" />
+    <Content Include="ts\applicationVue.ts" />
+    <Content Include="ts\vuesPlateforme\composants\carouselSpecifique.ts" />
+    <Content Include="ts\vuesPlateforme\composants\datatables.ts" />
+    <Content Include="ts\vuesPlateforme\composants\modalErreur.ts" />
+    <Content Include="ts\vuesPlateforme\composants\modalInformation.ts" />
+    <Content Include="ts\vuesPlateforme\composants\modalSpecifique.ts" />
+    <Content Include="ts\vuesPlateforme\composants\noeudTreeSpecifique.ts" />
+    <Content Include="ts\vuesPlateforme\composants\proprietesDatatables.ts" />
+    <Content Include="ts\vuesPlateforme\composants\proprietesDatatablesBouton.ts" />
+    <Content Include="ts\vuesPlateforme\composants\proprietesDatatablesColonne.ts" />
+    <Content Include="ts\vuesPlateforme\composants\spinnerSpecifique.ts" />
+    <Content Include="ts\shims-png.d.ts" />
+    <Content Include="ts\vuesPlateforme\composants\treeSpecifique.ts" />
+    <Content Include="ts\vuesPlateforme\ivuePartenaires.ts" />
+    <Content Include="ts\vuesPlateforme\templates\applicationVue.html" />
+    <Content Include="ts\vuesPlateforme\templates\carouselSpecifique.html" />
+    <Content Include="ts\vuesPlateforme\templates\datatables.html" />
+    <Content Include="ts\vuesPlateforme\templates\editeurHtml.html" />
+    <Content Include="ts\vuesPlateforme\templates\modalErreur.html" />
+    <Content Include="ts\vuesPlateforme\templates\modalInformation.html" />
+    <Content Include="ts\vuesPlateforme\templates\modalSpecifique.html" />
+    <Content Include="ts\vuesPlateforme\templates\multipleSelectAvecTag.html" />
+    <Content Include="ts\vuesPlateforme\templates\spinnerSpecifique.html" />
+    <Content Include="ts\vuesPlateforme\templates\treeSpecifique.html" />
+    <Content Include="ts\vuesPlateforme\templates\vueAdministration.html" />
+    <Content Include="ts\vuesPlateforme\templates\vueAuthentification.html" />
+    <Content Include="ts\vuesPlateforme\templates\vueCoordinateurs.html" />
+    <Content Include="ts\vuesPlateforme\templates\vueAPropos.html" />
+    <Content Include="ts\vuesPlateforme\templates\vueAidesFinancieres.html" />
+    <Content Include="ts\vuesPlateforme\templates\vueAccueil.html" />
+    <Content Include="ts\vuesPlateforme\templates\vueCouts.html" />
+    <Content Include="ts\vuesPlateforme\templates\vueDeconnexion.html" />
+    <Content Include="ts\vuesPlateforme\templates\vueDetailsUtilisateur.html" />
+    <Content Include="ts\vuesPlateforme\templates\vueErreur.html" />
+    <Content Include="ts\vuesPlateforme\templates\vueMails.html" />
+    <Content Include="ts\vuesPlateforme\vueAdministration.ts" />
+    <Content Include="ts\vuesPlateforme\vueAPropos.ts" />
+    <Content Include="ts\vuesPlateforme\templates\vuePartenaires.html" />
+    <Content Include="ts\vuesPlateforme\vueAccueil.ts" />
+    <Content Include="ts\vuesPlateforme\vueAidesFinancieres.ts" />
+    <Content Include="ts\vuesPlateforme\vueAuthentifiation.ts" />
+    <Content Include="ts\vuesPlateforme\vueCoordinateurs.ts" />
+    <Content Include="ts\vuesPlateforme\vueCouts.ts" />
+    <Content Include="ts\vuesPlateforme\vueDeconnexion.ts" />
+    <Content Include="ts\vuesPlateforme\vueDetailsUtilisateur.ts" />
+    <Content Include="ts\vuesPlateforme\vueErreur.ts" />
+    <Content Include="ts\vuesPlateforme\vueMails.ts" />
+    <Content Include="ts\vuesPlateforme\vuePartenaires.ts" />
+    <Content Include="Web.config" />
+    <Content Include="webpack.config.js" />
+  </ItemGroup>
+</Project>

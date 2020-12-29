@@ -1,0 +1,46 @@
+﻿<div id="app">
+    <nav class="navbar top navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-center" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="accueil">
+                <img height="95" id="imageLogo" alt="">
+            </a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <router-link class="nav-link" :to="{ name: 'accueil' }">Accueil</router-link>
+                    <router-link class="nav-link" :to="{ name: 'partenaires' }">Partenaires</router-link>
+                    <router-link class="nav-link" :to="{ name: 'aidesfinancieres' }">Aides Financières</router-link>
+                    <router-link class="nav-link" :to="{ name: 'coordinateurs' }">Coordinateurs</router-link>
+                    <router-link class="nav-link" :to="{ name: 'couts' }">Couts</router-link>
+                    <router-link class="nav-link" :to="{ name: 'mails' }">Mails</router-link>
+                    <router-link class="nav-link" :to="{ name: 'administration' }">Administration</router-link>
+                    <router-link class="nav-link" :to="{ name: 'apropos' }">A Propos</router-link>
+                </li>
+            </ul>
+        </div>
+        <form class="form-inline my-2 my-lg-0">
+            <router-link v-if="UtilisateurConnecte != null" class="nav-link text-light" :to="{ name: 'detailsUtilisateur' }">{{ UtilisateurConnecte.nomUtilisateur }}</router-link>
+            <router-link v-if="UtilisateurConnecte == null" class="btn btn-custom my-2 my-sm-0" :to="{ name: 'authentification' }">Se Connecter</router-link>
+            <router-link v-else class="btn btn-custom my-2 my-sm-0" :to="{ name: 'deconnexion' }">Se Déconnecter</router-link>
+        </form>
+    </nav>
+
+    <router-view></router-view>
+
+    <div class="test"></div>
+
+    <footer class="footer pt-4 bg-dark text-light">
+        <div class="container text-center text-md-left pb-5">
+            <h5 class="text-uppercase">Plateforme Relations Internationales</h5>
+            <p>Toutes les fonctionnalités de la Platefrome Relations Internationales.</p>
+        </div>
+        <div class="footer-copyright text-center py-3">
+            © <span class="footer-application-properties">{{ new Date().toLocaleString() }}</span> Copyright:
+            <a href="https://esirem.u-bourgogne.fr/" target="_blank"> Esirem</a>
+        </div>
+    </footer>
+
+</div>

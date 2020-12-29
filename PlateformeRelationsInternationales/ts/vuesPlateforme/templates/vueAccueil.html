@@ -1,0 +1,152 @@
+﻿<!-- Accueil -->
+<!-- Fonctionnalites -->
+
+<div>
+    <ModalErreur ref="modalErreur"></ModalErreur>
+
+    <div class="container-fluid text-center accueilImage">
+        <div class="accueilImageOverlay">
+            <div class="accueilImageContenu mt-5">
+                <h3 class="accueilImageTitre">Plateforme Relations Internationales</h3>
+                <p class="accueilImageDescription">
+                    Gestion des relations internationales.
+                </p>
+                <CarouselSpecifique ref="carouselAccueil" idCarousel="carouselAccueil"></CarouselSpecifique>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <!--<CarouselSpecifique ref="carouselAccueil" idCarousel="carouselAccueil"></CarouselSpecifique>-->
+    </div>
+
+    <section class="section fonctionnalites">
+
+        <div class="container">
+
+            <div class="sectionHeader text-center">
+                <h2 class="sectionTitre">Fonctionnalités de Plateformes Relations Internationnales</h2>
+                <div class="line"><span></span></div>
+                <p>
+                    Toutes les fonctionnalités de la Plateformes Relations Internationnales.
+                </p>
+            </div>
+
+            <div class="row">
+                <router-link class="col-md-6 col-12" :to="{ name: 'partenaires' }">
+                    <div>
+                        <div class="fonctionnalite">
+                            <div class="iconeFonctionnalite">
+                                <img width="50" id="imagePartenaires" alt="" />
+                            </div>
+                            <h3 class="fonctionnaliteTitre">Partenaires</h3>
+                            <p>
+                                Gérer les partenaires.
+                            </p>
+                        </div>
+                    </div>
+                </router-link>
+
+                <router-link class="col-md-6 col-12" :to="{ name: 'aidesfinancieres' }">
+                    <div>
+                        <div class="fonctionnalite">
+                            <div class="iconeFonctionnalite">
+                                <img width="50" id="imageAidesFinancieres" alt="" />
+                            </div>
+                            <h3 class="fonctionnaliteTitre">Aides Financières</h3>
+                            <p>
+                                Gérer les aides financieres.
+                            </p>
+                        </div>
+                    </div>
+                </router-link>
+
+            </div>
+
+            <div class="row">
+
+                <router-link class="col-md-6 col-12" :to="{ name: 'coordinateurs' }">
+                    <div>
+                        <div class="fonctionnalite">
+                            <div class="iconeFonctionnalite">
+                                <img width="50" id="imageCoordinateurs" alt="" />
+                            </div>
+                            <h3 class="fonctionnaliteTitre">Coordinateurs</h3>
+                            <p>
+                                Gérer les coordinateurs.
+                            </p>
+                        </div>
+                    </div>
+                </router-link>
+
+                <router-link class="col-md-6 col-12" :to="{ name: 'couts' }">
+                    <div>
+                        <div class="fonctionnalite">
+                            <div class="iconeFonctionnalite">
+                                <img width="40" id="imageCouts" alt="" />
+                            </div>
+                            <h3 class="fonctionnaliteTitre">Couts</h3>
+                            <p>
+                                Gérer les couts.
+                            </p>
+                        </div>
+                    </div>
+                </router-link>
+
+            </div>
+
+            <div class="row">
+
+                <router-link class="col-md-6 col-12" :to="{ name: 'mails' }">
+                    <div>
+                        <div class="fonctionnalite">
+                            <div class="iconeFonctionnalite">
+                                <img width="50" id="imageMails" alt="" />
+                            </div>
+                            <h3 class="fonctionnaliteTitre">Mails</h3>
+                            <p>
+                                Gérer les mails.
+                            </p>
+                        </div>
+                    </div>
+                </router-link>
+
+            </div>
+
+            <div class="row">
+
+                <router-link class="col-md-6 col-12" :to="{ name: 'administration' }">
+                    <div>
+                        <div class="fonctionnalite">
+                            <div class="iconeFonctionnalite">
+                                <img width="40" id="imageAdministration" alt="" />
+                            </div>
+                            <h3 class="fonctionnaliteTitre">Administration</h3>
+                            <p>
+                                Page d'administration de l'application.
+                            </p>
+                        </div>
+                    </div>
+                </router-link>
+
+                <router-link class="col-md-6 col-12" :to="{ name: 'apropos' }">
+                    <div>
+                        <div class="fonctionnalite">
+                            <div class="iconeFonctionnalite">
+                                <img width="40" id="imageAPropos" alt="" />
+                            </div>
+                            <h3 class="fonctionnaliteTitre">A Propos</h3>
+                            <p>
+                                Page à propos de l'application.
+                            </p>
+                        </div>
+                    </div>
+                </router-link>
+
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- /Fonctionnalites -->
+<!-- /Accueil -->
